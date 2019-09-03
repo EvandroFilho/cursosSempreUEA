@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <body>
+            <meta charset="UTF-8">
+            <title>Curso JavaScript</title>
+        </body>
+    </head>
+
+    <body>
+        <div id = "app">
+            
+        </div>
+        
+        <script>
+            function createBox(){
+                alert("Bloco criado");
+                var boxElement = document.createElement('div');
+                boxElement.setAttribute('class', 'box');
+
+                
+
+                boxElement.style.width = 100;
+                boxElement.style.height = 100;
+                boxElement.style.backgroundColor = '#f00';
+
+                return boxElement
+                
+            }
+
+            function addBox(boxContainerElement){
+                boxContainerElement.appendChild(createBox())
+
+            }
+
+            //criar container para as caixas
+            var boxContainerElement = document.querySelector('#app');
+            
+            //criar botão
+            var buttonElement = document.createElement('button');
+            buttonElement.setAttribute('onclick', 'addBox(boxContainerElement)')
+            var textElement = document.createTextNode('Criar elemento');
+            buttonElement.appendChild(textElement);
+
+
+            //cria container e adiciona botao em um container
+            var buttonContainerElement = document.querySelector('#app');
+            buttonContainerElement.appendChild(buttonElement);
+
+        
+            
+
+
+
+            
+
+
+
+        </script>
+    </body>
+</html>
