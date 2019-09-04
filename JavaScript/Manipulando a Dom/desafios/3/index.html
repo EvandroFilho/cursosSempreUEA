@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <body>
+            <meta charset="UTF-8">
+            <title>Curso JavaScript</title>
+        </body>
+    </head>
+
+    <body>
+        <div id = "app">
+            
+        </div>
+        
+        <script>
+
+            var nomes = ["Diego", "Gabriel", "Lucas"];
+
+            //Criando lista ul 
+            var listElement = document.createElement('ul');
+
+            //adicionando 
+            for(i = 0; i < nomes.length; i++){
+                var textElement = document.createTextNode(nomes[i]); //Variavel texto armazena nome
+                var listItemElement = document.createElement('li'); //cria variavel 'li' para armazenar um item
+                listItemElement.appendChild(textElement);//adiciona o texto no li
+                listElement.appendChild(listItemElement);
+            }
+
+        
+            //Referenciando container
+            var containerElement = document.querySelector('#app');
+            containerElement.appendChild(listElement);
+            
+
+
+        </script>
+    </body>
+</html>
