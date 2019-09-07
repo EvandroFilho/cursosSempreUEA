@@ -10,25 +10,20 @@
         <script>
 
 
-            function mostraHabilidades(usuarios){
-                for(const usuario of usuarios){
-                    console.log("O " + usuario.nome + " possui as habilidades: " + usuario.habilidades[0] + ", " + usuario.habilidades[1] + ", " + usuario.habilidades[2]);
+            function experiencia(anos){
+                if(anos >= 0 & anos <= 1){
+                    return 'INICIANTE';
+                } else if(anos >= 1 & anos <= 3){
+                    return 'Intermediario';
+                } else if(anos >= 3 & anos <= 6){
+                    return 'Avancado';
+                } else if(anos >= 7){
+                    return 'JEDI MASTER';
                 }
             }
+            var anosEstudo = 7;
 
-            var usuarios = [
-                {
-                    nome: "Diego",
-                    habilidades: ["JavaScript", "ReactJS", "Redux"]
-                },
-                {
-                    nome: "Gabriel",
-                    habilidades: ["VueJS", "Ruby on rails", "Elixir"]
-                }
-            ];
-            
-            mostraHabilidades(usuarios);
-            
+            alert(experiencia(anosEstudo));            
         </script>
     </body>
 </html>
